@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiResume</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>AiResume</h1>
+    </header>
+    <section>
+        <div class="form-container">
+            <form id="resume-form">
+
+                <div class="form-section">
+                    <div class="form-section-title">Personal Details</div>
+                    <div class="form-row">
+                        <div>
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="John" required>
+                        </div>
+                        <div>
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" placeholder="New York" required>
+                        </div>
+                        <div>
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" placeholder="123 Main St" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-section-title">Employment History</div>
+                    <div class="form-row employment-row">
+                        <div>
+                            <label for="job-title">Job Title</label>
+                            <input type="text" id="job-title" name="job-title" placeholder="Sales Associate" required>
+                        </div>
+                        <div>
+                            <label for="company-name">Company Name</label>
+                            <input type="text" id="company-name" name="company-name" placeholder="Best Buy" required>
+                        </div>
+                        <div class="start-date">
+                            <label for="start-month">Start Date</label>
+                            <div class="date-fields">
+                                <select id="start-month" name="start-month" required>
+                                    <option value="">Month</option>
+                                    <!-- Add options for each month -->
+                                </select>
+                                <input type="text" id="start-year" name="start-year" placeholder="Year" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="end-date">
+                            <label for="end-month">End Date</label>
+                            <div class="date-fields">
+                                <select id="end-month" name="end-month">
+                                    <option value="">Month</option>
+                                    <!-- Add options for each month -->
+                                </select>
+                                <input type="text" id="end-year" name="end-year" placeholder="Year">
+                            </div>
+                        </div>
+                        <div class="currently-working">
+                            <label for="currently-working" class="currently-working-label">Currently working here</label>
+                            <input type="checkbox" id="currently-working" name="currently-working">
+                        </div>
+                        <!-- Space for another column -->
+                    </div>
+                </div>
+                                
+                
+                <div class="form-section">
+                    <div class="form-section-title">Education</div>
+                    <div class="form-row">
+                        <div>
+                            <label for="education-institution">Education Institution</label>
+                            <input type="text" id="education-institution" name="education-institution" placeholder="ABC University" required>
+                        </div>
+                        <div>
+                            <label for="degree">Degree</label>
+                            <input type="text" id="degree" name="degree" placeholder="Bachelor of Science in Computer Science" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div>
+                            <label for="education-years">Years Attended</label>
+                            <input type="text" id="education-years" name="education-years" placeholder="2015-2019" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-section-title">Social Links</div>
+                    <div class="form-row">
+                        <div>
+                            <label for="linkedin">LinkedIn</label>
+                            <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/johndoe/" required>
+                        </div>
+                        <div>
+                            <label for="github">GitHub</label>
+                            <input type="url" id="github" name="github" placeholder="https://github.com/johndoe" required>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rest of the form sections -->
+            </form>
+        </div>
+    </section>
+    <script>
+        document.getElementById("resume-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Simulated API call to GPT-4
+            setTimeout(function() {
+                // Replace this line with the actual API call and response handling
+                const resumeText = "Simulated AI-generated resume content.";
+
+                document.getElementById("resume-text").textContent = resumeText;
+                document.getElementById("resume").style.display = "block";
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
