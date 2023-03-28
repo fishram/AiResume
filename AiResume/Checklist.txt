@@ -1,2 +1,0 @@
- - Be sure to update the API request handling in the JavaScript
-   code once you integrate the GPT-4 API to include the new fields.
